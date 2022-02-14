@@ -56,15 +56,19 @@ class Populate extends Command
 
     private function generate_people(){
             $people = [];
-            $people[] = (object) ['name' => 'Steve Smith', 'position_id' => 1,'created_by' => 1];
+            $people[] = (object) ['name' => 'Steve Smith', 'position_id' => 1,'status' => 'interviewing','created_by' => 1];
             $people[] = (object) ['name' => 'Mike Thomas', 'position_id' => 1,'created_by' => 1];
             $people[] = (object) ['name' => 'Noah Kolcz', 'position_id' => 3,'created_by' => 1];
-            $people[] = (object) ['name' => 'Wally Kolcz', 'position_id' => 2,'created_by' => 1];
+            $people[] = (object) ['name' => 'Wally Kolcz', 'position_id' => 2,'status' => 'interviewing','created_by' => 1];
             $people[] = (object) ['name' => 'Gabe Kolcz', 'position_id' => 1,'created_by' => 1];
+            $people[] = (object) ['name' => 'Glen Kolcz', 'position_id' => 3,'status' => 'rejected','created_by' => 1];
+            $people[] = (object) ['name' => 'Jody Kolcz', 'position_id' => 3,'created_by' => 1];
+            $people[] = (object) ['name' => 'Hollie Kolcz', 'position_id' => 2,'status' => 'contacted','created_by' => 1];
+            $people[] = (object) ['name' => 'Mike Kolcz', 'position_id' => 3,'created_by' => 1];
             $people[] = (object) ['name' => 'Mary Lewis', 'position_id' => 3,'created_by' => 1];
-            $people[] = (object) ['name' => 'Chad Morgan', 'position_id' => 2,'created_by' => 1];
+            $people[] = (object) ['name' => 'Chad Morgan', 'position_id' => 2,'status' => 'rejected','created_by' => 1];
             $people[] = (object) ['name' => 'Kimi Blackledge', 'position_id' => 3,'created_by' => 1];
-            $people[] = (object) ['name' => 'Cameron Payne', 'position_id' => 3,'created_by' => 1];
+            $people[] = (object) ['name' => 'Cameron Payne', 'position_id' => 3,'status' => 'contacted','created_by' => 1];
             $people[] = (object) ['name' => 'Oksana Kravets', 'position_id' => 3,'created_by' => 1];
 
         foreach($people as $person){
