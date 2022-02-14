@@ -75,9 +75,9 @@ class ApplicantController extends Controller
      * @param int $page
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
-    public function search($name, $page=0){
+    public function search($name, $status, $page=0){
         try{
-            $applicants = $this->applicants->search($name,$page);
+            $applicants = $this->applicants->search($name,$status,$page);
             if($applicants){
                 return response([
                     'success' => true,

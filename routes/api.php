@@ -22,7 +22,7 @@ Route::group(['prefix' => 'v1','middleware' => ['auth:sanctum']], function () {
 
     Route::get('/applicant/{id}',[ApplicantController::class, 'fetch'])->name('fetch-applicant');
 
-    Route::get('/applicant/search/{name}/{page?}',[ApplicantController::class, 'search'])->name('search-applicants');
+    Route::get('/applicant/search/{name}/{status}/{page?}',[ApplicantController::class, 'search'])->name('search-applicants');
 
     Route::post('/applicant/{id}',[ApplicantController::class, 'update_applicant'])->name('update-applicant');
 

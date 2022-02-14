@@ -2,7 +2,6 @@
 
 namespace App\FlexNGate\Applicants;
 
-use http\Env\Request;
 
 interface ApplicantInterface{
 
@@ -11,6 +10,6 @@ interface ApplicantInterface{
     public function create($applicant);
     public function update($id,$applicant);
     public function delete($id);
-    public function search($name,$page);
+    public function search($term, $status, $page);
 
 }
