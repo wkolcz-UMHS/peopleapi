@@ -28,7 +28,9 @@ All routes are versioned for future proofing with a v1 perfix and include
     - Fetch individual applicat by id
         - (get) /api/v1/applicant/[id]
     - Search applicant by name, and page. Defaults to 0
-        - (get) /api/v1/applicant/search/[name]/[page] (0,1,2)
+        - (get) /api/v1/applicant/search/[name]/[status]/[page]
+            - status ['all','open','interviewing','contacted','rejected']
+            - page 0,1,2
     - Update applicant
         - (post) /api/v1/applicant/[id]
             - takes a json object of 'info' that includes string 'name', integer 'position_id', string 'status', integer 'created_by'
